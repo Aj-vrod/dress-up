@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_22_151536) do
   create_table "dresses", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "price"
+    t.float "price"
     t.string "type"
     t.string "color"
     t.string "photo"

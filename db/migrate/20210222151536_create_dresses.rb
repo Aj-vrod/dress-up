@@ -3,7 +3,7 @@ class CreateDresses < ActiveRecord::Migration[6.0]
     create_table :dresses do |t|
       t.string :title
       t.text :description
-      t.integer :price
+      t.float :price
       t.string :type
       t.string :color
       t.string :photo
