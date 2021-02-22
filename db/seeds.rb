@@ -5,7 +5,7 @@ Dress.destroy_all
 puts 'Shredding old dresses...'
 
 # types of dresses
-sample_types = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 'Going Out Dresses', 'Occasion Dresses', 'Summer Dresses', 'Work Dresses']
+# sample_types = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 'Going Out Dresses', 'Occasion Dresses', 'Summer Dresses', 'Work Dresses']
 
 # create dresses
 20.times do
@@ -13,11 +13,11 @@ sample_types = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 'Goin
     title: Faker::Commerce.product_name,
     description: Faker::ChuckNorris.fact,
     price: Faker::Commerce.price,
-    type: sample_types.sample,
+    category: 'Bridal Dresses',
     color: Faker::Color.color_name ,
     photo: 'https://www.fillmurray.com/640/360'
     )
-  puts "💃 Adding #{dress}..."
+  puts "💃 Adding #{dress.title}..."
 end
 
 puts "Weow, app's now filled with loads of 🔥 dresses!"
