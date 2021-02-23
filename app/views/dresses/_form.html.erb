@@ -1,1 +1,15 @@
-_form.html.erb
+<%= simple_form_for @dress do |f| %>
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :category, collection: Dress::CATEGORIES %>
+    <%= f.input :color %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+  </div>
+
+  <div class="form-actions">
+     <%= f.submit "Add dress", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
