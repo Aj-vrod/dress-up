@@ -1,8 +1,5 @@
 class DressesController < ApplicationController
-
-  def show
-    @dress = Dress.find(params[:id])
+  def index
+    @dresses = Dress.all
   end
-
-
 end
