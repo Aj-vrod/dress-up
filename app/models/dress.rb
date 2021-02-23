@@ -1,6 +1,7 @@
 class Dress < ApplicationRecord
   has_many :bookings
   belongs_to :user
+  has_one_attached :photo
 
   CATEGORIES = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 'Going Out Dresses', 'Occasion Dresses', 'Summer Dresses', 'Work Dresses']
 
