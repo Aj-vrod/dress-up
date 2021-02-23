@@ -21,3 +21,4 @@ sample_categories = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 
 end
 
 puts "Weow, app's now filled with loads of 🔥 dresses!"
+
