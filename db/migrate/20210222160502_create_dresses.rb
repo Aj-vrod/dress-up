@@ -4,7 +4,7 @@ class CreateDresses < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.float :price
-      t.string :type
+      t.string :category
       t.string :color
       t.string :photo
 
