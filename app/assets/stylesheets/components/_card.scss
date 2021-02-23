@@ -1,0 +1,37 @@
+/* Dress Card in Index */
+
+.card-dress {
+  height: 278px;
+  background-color: white;
+  border-radius: 8px;
+  transition: all .3s ease-in-out;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+}
+
+.card-dress:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12)
+}
+
+.card-dress .card-dress-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-dress .card-dress-infos {
+  padding: 16px;
+}
+
+.card-dress .card-dress-infos h2 {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.card-dress .card-dress-infos p {
+  margin: 0;
+  font-size: 12px;
+}
