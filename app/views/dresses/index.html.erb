@@ -2,7 +2,7 @@
 <ul>
   <% @dresses.each do |dress| %>
     <li>
-      <%= dress.title %> | <%= link_to "delete", dress_path(dress), method: :destroy, data: { confirm: "Are you sure?"}  %>
+      <%= dress.title %> | <%= link_to "delete", dress_path(dress), method: :delete, data: { confirm: "Are you sure?"}  %>
     </li>
   <% end %>
 </ul>
