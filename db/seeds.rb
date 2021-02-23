@@ -14,10 +14,10 @@ puts 'Kicking users...'
     email: Faker::Internet.email,
     encrypted_password:Faker::Internet.password(min_length: 8),
     nickname: Faker::Internet.username,
-    address: Faker::Address.street_address
-    #avatar: Faker::Avatar.image
+    address: Faker::Address.street_address,
+    avatar: Faker::Avatar.image
     )
-  puts "User created!"
+  puts "#{user.nickname} created!"
 end
 
 # types of dresses
