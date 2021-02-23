@@ -2,9 +2,9 @@ require 'faker'
 
 # delete old stuff from db
 Dress.destroy_all
-puts 'Shredding old dresses...'
+puts '🗑 Shredding old dresses...'
 User.destroy_all
-puts 'Kicking users...'
+puts '🗑 Kicking users...'
 
 # create new users
 10.times do
@@ -17,7 +17,7 @@ puts 'Kicking users...'
     address: Faker::Address.street_address,
     avatar: Faker::Avatar.image
     )
-  puts "#{user.nickname} created!"
+  puts "🙂 #{user.nickname} created!"
 end
 
 # types of dresses
@@ -37,5 +37,5 @@ sample_categories = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 
   puts "💃 Adding #{dress.title}..."
 end
 
-puts "Weow, app's now filled with loads of 🔥 dresses!"
+puts "✅ Weow, app's now filled with loads of 🔥 dresses!"
 
