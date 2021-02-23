@@ -25,6 +25,7 @@ class DressesController < ApplicationController
   end
 
   def destroy
+    authorize @dress
     @dress.destroy
     redirect_to dresses_path
   end
