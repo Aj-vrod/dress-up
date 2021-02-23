@@ -1,8 +1,12 @@
 class DressesController < ApplicationController
+  def index
+    @dresses = Dress.all
+  end
+  
   def new
     @dress = Dress.new
   end
-
+  
   def create
     @dress = Dress.new(dress_params)
     @dress.user = current_user
