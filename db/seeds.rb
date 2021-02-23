@@ -13,7 +13,7 @@ sample_categories = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 
     price: Faker::Commerce.price,
     category: sample_categories.sample,
     color: Faker::Color.color_name ,
-    photo: 'https://www.fillmurray.com/640/360',
+    photo: 'https://www.placecage.com/400/300',
     user: User.all.sample
     )
   puts "💃 Adding #{dress.title}..."

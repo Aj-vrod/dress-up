@@ -3,11 +3,11 @@ class DressesController < ApplicationController
   def index
     @dresses = Dress.all
   end
-  
+
   def new
     @dress = Dress.new
   end
-  
+
   def create
     @dress = Dress.new(dress_params)
     @dress.user = current_user
@@ -20,7 +20,7 @@ class DressesController < ApplicationController
 
   def show
   end
-  
+
   def destroy
     @dress.destroy
     redirect_to dresses_path
@@ -28,9 +28,9 @@ class DressesController < ApplicationController
 
   private
   def dress_params
-    params.require(:dress).permit(:title, :description, :photo, :color, :category, :price)
+    params.require(:dress).permit(:title, :description, :image, :color, :category, :price)
   end
-  
+
   def set_params
     @dress = Dress.find(params[:id])
   end
