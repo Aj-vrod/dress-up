@@ -11,6 +11,15 @@
       <p>category: <%= @dress.category %></p>
       <p>color: <%= @dress.color %></p>
       <p>price: <%= @dress.price %></p>
+      <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
+        <i class="fas fa-trash"></i>
+      <% end %>
+      <br>
+      <br>
+      <p><strong>Rent this dress from <%= @dress.user.first_name %>:</strong></p>
+      <p> // render booking form here! // </p>
+      <br>
+      <br>
       <%#= link_to 'Book now', new_dress_booking_path, class: 'btn btn-primary-small' %>
       <%= link_to '👈 Back to all dresses', dresses_path %>
     </div>
