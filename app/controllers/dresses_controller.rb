@@ -21,6 +21,7 @@ class DressesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     authorize @dress
   end
 

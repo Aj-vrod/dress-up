@@ -6,7 +6,8 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def new?
-    record.user != user
+    true
+    # record.dress.user != user
   end
 
   def create?
