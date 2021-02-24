@@ -25,6 +25,7 @@ class DressesController < ApplicationController
   end
 
   def destroy
+    authorize @dress
     @dress.destroy
     redirect_to dresses_path
   end
@@ -32,7 +33,7 @@ class DressesController < ApplicationController
   private
 
   def dress_params
-    params.require(:dress).permit(:title, :description, :photo, :color, :category, :price)
+    params.require(:dress).permit(:title, :description, :image, :color, :category, :price)
   end
 
   def set_params

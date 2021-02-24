@@ -1,8 +1,30 @@
-<h1>All dresses</h1>
-<ul>
-  <% @dresses.each do |dress| %>
-    <li>
-      <%= dress.title %> | <%= link_to "delete", dress_path(dress), method: :destroy, data: { confirm: "Are you sure?"}  %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="top">
+    <h1>Rent a dress for any occasion!</h1>
+    <%= link_to "add a dress", new_dress_path, class:"btn btn-primary" %>
+  </div>
+
+  <div class="main-content">
+    <div class="cards">
+      <% @dresses.each do |dress| %>
+
+      <%= link_to dress_path(dress), class: "dress" do %>
+          <div class="card-dress">
+            <% if dress.image.attached? %>
+              <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
+            <% else %>
+              <%= image_tag dress.photo, class: "card-dress-image" %>
+            <% end %>
+            <div class="card-dress-infos">
+              <div>
+                <h2><%= dress.title%></h2>
+                <p><%= dress.price %>€ / day</p>
+                <!-- <p><%= link_to "delete", dress_path(dress), method: :delete, data: { confirm: "Are you sure?"}  %></p> -->
+              </div>
+            </div>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
