@@ -3,10 +3,10 @@
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <h1>Book a dress <%= @dress.title %></h1>
 
-      <%= simple_form_for [@user, @booking] do |f| %>
-        <%= f.input  { multiple: true, class: 'multiple-select' }, include_hidden: false %>
-        <%= f.text_field :start_date, placeholder: 'Start Date', class: 'form-control', readonly: 'true' %>
-        <%= f.text_field :end_date, placeholder: 'End Date', class: 'form-control', disabled: 'true', readonly: 'true'  %>
+      <%= simple_form_for [@dress, @booking] do |f| %>
+        <%= f.input :start_date, placeholder: 'Start Date', class: 'form-control' %>
+        <%= f.input :end_date, placeholder: 'End Date', class: 'form-control' %>
+        <%= f.input :total_cost, placeholder: 'Total cost', class: 'form-control' %>
         <%= f.submit "Book a dress now", class: 'btn btn-primary' %>
       <% end %>
     </div>
