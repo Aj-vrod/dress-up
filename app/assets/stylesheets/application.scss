@@ -43,3 +43,41 @@ a {
     color: $purple;
   }
 }
+
+.search-form {
+  margin-bottom: 30px;
+}
+
+.img-home {
+  height: 550px;
+  background-image: url('https://images.pexels.com/photos/1488507/pexels-photo-1488507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  .center {
+    width: 500px;
+    text-align: center;
+    h2 {
+      font-family: emoji;
+    }
+    .search-input {
+      .search-form {
+        .btn-primary-small {
+          padding: 5px 10px;
+        }
+        #address-input {
+          width: 300px;
+          border: 1px solid rgba(0,0,0,.3);
+          border-radius: 5px;
+          height: 31px;
+        }
+      }
+    }
+  }
+}
+
