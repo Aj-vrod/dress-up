@@ -1,15 +1,18 @@
-
 <div class="container">
-  <% if @dress.image.attached? %>
-    <%= cl_image_tag @dress.image.key, width: 400, height: 300, crop: :fill, class: "dress-image" %>
-  <% else %>
-    <%= image_tag @dress.photo %>
-  <% end %>
-  <h1><%= @dress.title %></h1>
-  <p><%= @dress.description %></p>
-  <p>category: <%= @dress.category %></p>
-  <p>color: <%= @dress.color %></p>
-  <p>price: <%= @dress.price %></p>
-  <%= link_to '👈 Back to all dresses', dresses_path %>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <% if @dress.image.attached? %>
+        <%= cl_image_tag @dress.image.key, width: 400, height: 300, crop: :fill, class: "dress-image" %>
+      <% else %>
+        <%= image_tag @dress.photo %>
+      <% end %>
+      <h1><%= @dress.title %></h1>
+      <p><%= @dress.description %></p>
+      <p>category: <%= @dress.category %></p>
+      <p>color: <%= @dress.color %></p>
+      <p>price: <%= @dress.price %></p>
+      <%#= link_to 'Book now', new_dress_booking_path, class: 'btn btn-primary-small' %>
+      <%= link_to '👈 Back to all dresses', dresses_path %>
+    </div>
+  </div>
 </div>
-
