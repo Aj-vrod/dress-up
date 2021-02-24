@@ -8,8 +8,4 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     authorize @booking
   end
-
-  def create
-    authorize @booking
-  end
 end
