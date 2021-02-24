@@ -11,8 +11,10 @@
       <p>Category: <%= @dress.category %></p>
       <p>Color: <%= @dress.color %></p>
       <p>Price: <%= @dress.price %> / day</p>
-      <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
-        <i class="fas fa-trash"></i>
+      <% if current_user == @dress.user %>
+        <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
       <% end %>
       <br>
       <br>
