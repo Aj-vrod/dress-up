@@ -17,10 +17,9 @@
       <br>
       <br>
       <p><strong>Rent this dress from <%= @dress.user.first_name %>:</strong></p>
-      <p> // render booking form here! // </p>
+      <%= render './bookings/form', booking: @booking %>
       <br>
       <br>
-      <%#= link_to 'Book now', new_dress_booking_path, class: 'btn btn-primary-small' %>
       <%= link_to '👈 Back to all dresses', dresses_path %>
     </div>
   </div>
