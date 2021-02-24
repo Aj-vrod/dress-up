@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h1>Book a dress <%= @dress.title %></h1>
+
+      <%= simple_form_for [@dress, @booking] do |f| %>
+        <%= f.input :start_date, placeholder: 'Start Date', class: 'form-control' %>
+        <%= f.input :end_date, placeholder: 'End Date', class: 'form-control' %>
+        <%= f.input :total_cost, placeholder: 'Total cost', class: 'form-control' %>
+        <%= f.submit "Book a dress now", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
