@@ -14,7 +14,7 @@
 }
 
 .card-dress:hover h2, p {
-    color: #323232;
+  color: #323232;
 }
 
 .card-dress-infos {
@@ -26,4 +26,40 @@
   margin: 0;
   font-size: 16px;
   margin-bottom: 4px;
+}
+
+
+/* Bookings Card in Index */
+
+.bookings-card {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bookings-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.bookings-card:hover .bookings-card-info a {
+    color: #323232;
+}
+
+.bookings-card-info {
+  padding-left: 20px;
+}
+
+.bookings-card-info h2 {
+  font-size: 20px;
+}
+
+.bookings-card-info p {
+  padding: none !important;
+}
+
+.bookings-card-info a {
+  color: #323232;
 }

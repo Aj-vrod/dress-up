@@ -1,9 +1,38 @@
-<h1>bookings</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1>My Bookings</h1>
 
-<% @bookings.each do |booking| %>
-  <p>
-    <%= booking.dress.title %> |
-    <%= booking.user.first_name %> <%= booking.user.last_name %> |
-    <%= booking.dress.user.first_name %> <%= booking.dress.user.last_name %>
-  </p>
-<% end %>
+      <% @bookings.each do |booking| %>
+
+
+
+        <div class="bookings-card">
+          <% if booking.dress.image.attached? %>
+            <%= cl_image_tag booking.dress.image.key, class: "dress-image" %>
+          <% else %>
+               <%= image_tag booking.dress.photo %>
+          <% end %>
+
+          <div class="bookings-card-info">
+            <h2>
+              <%= link_to "#{booking.dress.title}", dresses_path(booking.dress) %>
+            </h2>
+            <p>
+              <strong>From:</strong> <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %> |
+              <% startdate = booking.start_date %>
+              <% enddate = booking.end_date %>
+              <% inclusive_days_in_range = (startdate .. enddate).count %>
+              <strong>Rented for:</strong> <%= inclusive_days_in_range %> days |
+              <% price = booking.dress.price %>
+              <% totalprice = inclusive_days_in_range * price %>
+              <strong>Total price:</strong> <%= totalprice.round(2) %>€
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
