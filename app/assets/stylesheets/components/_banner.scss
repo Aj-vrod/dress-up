@@ -10,14 +10,21 @@
 }
 
 .banner h1 {
+  max-width: 400px;
   font-size: 32px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .banner {
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   height: 500px;
-  background-image: url("https://images.unsplash.com/photo-1482270406631-a02c51d93c2f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1562&q=80");
-  background-size: cover
+}
+
+.home h2 {
+  font-size:
+  24px;
 }
