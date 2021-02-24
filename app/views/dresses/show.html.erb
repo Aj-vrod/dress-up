@@ -8,15 +8,17 @@
       <% end %>
       <h1><%= @dress.title %></h1>
       <p><%= @dress.description %></p>
-      <p>category: <%= @dress.category %></p>
-      <p>color: <%= @dress.color %></p>
-      <p>price: <%= @dress.price %></p>
+      <p>Category: <%= @dress.category %></p>
+      <p>Color: <%= @dress.color %></p>
+      <p>Price: <%= @dress.price %> / day</p>
       <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
         <i class="fas fa-trash"></i>
       <% end %>
       <br>
       <br>
-      <%= render 'bookings/form', booking: @booking %>
+      <% if current_user != @dress.user %>
+        <%= render 'bookings/form', booking: @booking %>
+      <% end %>
       <br>
       <br>
       <%= link_to '👈 Back to all dresses', dresses_path %>
