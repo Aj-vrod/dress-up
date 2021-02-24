@@ -1,10 +1,17 @@
-<div class="container">
-  <h2>Welcome to our page!</h2>
-  <div class="search-input">
-    <div class="form">
-      <label for="address-input">Insert your address:</label><br>
-      <input type="text" name="address" id="address-input">
-      <input type="submit" value="search">
+<div class=" container container-home">
+  <div class="header-center">
+    <div class="center">
+      <h2>Welcome to our page!</h2>
+      <div class="search-input">
+        <div class="search-form">
+          <label for="address-input">Insert your address:</label><br>
+          <input type="text" name="address" id="address-input">
+          <input type="submit" value="search" class="btn-primary-small">
+        </div>
+        <%= link_to "See all dresses", dresses_path, class: "btn-primary-small"  %>
+      </div>
     </div>
+  </div>
+  <div class="img-home">
   </div>
 </div>
