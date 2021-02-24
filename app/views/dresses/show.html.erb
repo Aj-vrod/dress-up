@@ -7,10 +7,11 @@
         <%= image_tag @dress.photo %>
       <% end %>
       <h1><%= @dress.title %></h1>
+      <p><strong>Rented from:</strong> <%= @dress.user.first_name %></p>
+      <p><strong>Category:</strong> <%= @dress.category %> |
+      <strong>Color:</strong> <%= @dress.color %></p>
       <p><%= @dress.description %></p>
-      <p>Category: <%= @dress.category %></p>
-      <p>Color: <%= @dress.color %></p>
-      <p>Price: <%= @dress.price %> / day</p>
+      <p><strong>Price:</strong> <%= @dress.price %> / day</p>
       <% if current_user == @dress.user %>
         <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
           <i class="fas fa-trash"></i>
