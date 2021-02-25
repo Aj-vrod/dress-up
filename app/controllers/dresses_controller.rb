@@ -4,17 +4,19 @@ class DressesController < ApplicationController
     if params[:query].present?
       @dresses = policy_scope(Dress.search_dresses(params[:query]))
       @markers = @dresses.geocoded.map do |dress|
-      {
-        lat: dress.latitude,
-        lng: dress.longitude
-      }
+        {
+          lat: dress.latitude,
+          lng: dress.longitude
+        }
+      end
     else
       @dresses = policy_scope(Dress.all)
-        @markers = @dresses.geocoded.map do |dress|
-      {
-        lat: dress.latitude,
-        lng: dress.longitude
-      }
+      @markers = @dresses.geocoded.map do |dress|
+        {
+          lat: dress.latitude,
+          lng: dress.longitude
+        }
+      end
     end
   end
 
