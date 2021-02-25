@@ -5,7 +5,8 @@
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
       <a href="#">My Dresses</a>
       <a href="#">My Bookings</a>
-      <%= cl_image_tag current_user.avatar.key, class: "avatar" %>
+
+
     <% else %>
       <%= link_to "Log In", new_user_session_path %>
       <%= link_to "Sign Up", new_user_registration_path %>
