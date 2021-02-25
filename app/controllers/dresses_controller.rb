@@ -2,6 +2,11 @@ class DressesController < ApplicationController
   before_action :set_params, only: [:show, :destroy]
   def index
     @dresses = policy_scope(Dress.all)
+    @markers = @dresses.geocoded.map do |dress|
+      {
+        lat: dress.latitude,
+        lng: dress.longitude
+      }
   end
 
   def new
