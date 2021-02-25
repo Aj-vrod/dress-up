@@ -1,5 +1,5 @@
 <%= simple_form_for [ @dress, @booking ] do |f| %>
-  <p><strong>Rent this dress from <%= @dress.user.first_name %>:</strong></p>
+  <p class="title-rent" >Rent this dress from <%= @dress.user.first_name %>:</p>
 
   <div class="form-inputs">
     <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
