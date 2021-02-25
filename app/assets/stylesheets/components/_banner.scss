@@ -1,0 +1,30 @@
+.banner .container .search {
+  display: flex;
+  #address-input {
+    max-width: 400px;
+    flex-grow: 1;
+  }
+  .btn {
+    margin-left: 8px;
+  }
+}
+
+.banner h1 {
+  max-width: 400px;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.home h2 {
+  font-size:
+  24px;
+}

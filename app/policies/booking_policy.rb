@@ -1,7 +1,8 @@
 class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(@record.user == @user)
+      # scope.where(@record.user == @user)
+      scope.where(user: user)
     end
   end
 
