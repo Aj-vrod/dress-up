@@ -1,7 +1,17 @@
 <div class="container">
   <div class="top">
-    <h1>Rent a dress for any occasion!</h1>
-    <%= link_to "add a dress", new_dress_path, class:"btn btn-primary" %>
+
+    <%= form_tag dresses_path, class: "search", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          id: "address-input",
+          class: "form-control",
+          placeholder: "Look for anything!"
+        %>
+        <%= submit_tag "Find now", class: "btn btn-primary-small" %>
+      <% end %>
+
+    <%= link_to "add a dress", new_dress_path, class: "btn btn-primary add" %>
   </div>
 
   <div class="main-content">

@@ -1,9 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1551890946-3e5446d3a71b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80);">
   <div class="container">
     <h1>Discover stunning dresses for any occasion</h1>
-    <div class="search">
-      <input type="text" name="address" id="address-input" placeholder="Enter an address" class="form-control">
-      <input type="submit" value="Find now" class="btn btn-primary">
+    <div>
+
+      <%= form_tag dresses_path, class: "search", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          id: "address-input",
+          class: "form-control",
+          placeholder: "Look for anything!"
+        %>
+        <%= submit_tag "Find now", class: "btn btn-primary" %>
+      <% end %>
+
     </div>
   </div>
 </div>
@@ -38,25 +47,3 @@
   </div>
   <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
 </div>
-
-
-
-<!-- Code Ammy  -->
-
-<!-- <div class=" container container-home">
-  <div class="header-center">
-    <div class="center">
-      <h2>Welcome to our page!</h2>
-      <div class="search-input">de
-        <div class="search-form">
-          <label for="address-input">Insert your address:</label><br>
-          <input type="text" name="address" id="address-input">
-          <input type="submit" value="search" class="btn-primary-small">
-        </div>
-        <%= link_to "See all dresses", dresses_path, class: "btn-primary-small"  %>
-      </div>
-    </div>
-  </div>
-  <div class="img-home">
-  </div>
-</div> -->
