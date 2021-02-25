@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="main-content">
+    <div class="cards">
+      <% @dresses.each do |dress| %>
+
+      <%= link_to dress_path(dress), class: "dress" do %>
+          <div class="card-dress">
+            <% if dress.image.attached? %>
+              <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
+            <% else %>
+              <%= image_tag dress.photo, class: "card-dress-image" %>
+            <% end %>
+            <div class="card-dress-infos">
+              <div>
+                <h2><%= dress.title%></h2>
+                <p><%= dress.price %>€ / day</p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>

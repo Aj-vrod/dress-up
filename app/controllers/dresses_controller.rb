@@ -41,6 +41,13 @@ class DressesController < ApplicationController
     redirect_to dresses_path
   end
 
+  # HERE MY DRESSES
+
+  def mydresses
+    @dresses = Dress.where(user: current_user)
+    authorize @dresses
+  end
+
   private
 
   def dress_params
