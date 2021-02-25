@@ -1,30 +1,43 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-8">
-      <% if @dress.image.attached? %>
-        <%= cl_image_tag @dress.image.key, width: 400, height: 300, crop: :fill, class: "dress-image" %>
-      <% else %>
-        <%= image_tag @dress.photo %>
-      <% end %>
-      <h1><%= @dress.title %></h1>
-      <p><strong>Rented from:</strong> <%= @dress.user.first_name %></p>
-      <p><strong>Category:</strong> <%= @dress.category %> |
-      <strong>Color:</strong> <%= @dress.color %></p>
-      <p><%= @dress.description %></p>
-      <p><strong>Price:</strong> <%= @dress.price %> € / day</p>
-      <% if current_user == @dress.user %>
-        <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
-          <i class="fas fa-trash"></i>
+    <!-- image -->
+    <div class="col-5">
+      <div class="show-content">
+        <% if @dress.image.attached? %>
+          <%= cl_image_tag @dress.image.key, class: "dress-image-show" %>
+        <% else %>
+          <%= image_tag @dress.photo, class: "dress-image-show" %>
         <% end %>
-      <% end %>
-      <br>
-      <br>
-      <% if current_user != @dress.user %>
-        <%= render 'bookings/form', booking: @booking %>
-      <% end %>
-      <br>
-      <br>
-      <%= link_to '👈 Back to all dresses', dresses_path %>
+        <%= link_to '👈 Back to all dresses', dresses_path, class: "link-back" %>
+      </div>
+    </div>
+
+    <!-- info / booking-->
+    <div class="col-4">
+      <div class="show-content">
+        <div>
+          <h1><%= @dress.title %></h1>
+          <p class="price"><%= @dress.price %> € / day</p>
+        </div>
+        <div>
+          <p class="details"><%= @dress.category %> | <%= @dress.color %></p>
+          <p class="description"><%= @dress.description %></p>
+        </div>
+        <!-- destroy -->
+        <div>
+          <% if current_user == @dress.user %>
+            <%= link_to dress_path(@dress), method: :delete, data: { confirm: "Are you sure you want to delete #{@dress.title}?"} do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="form-booking">
+          <!-- form -->
+          <% if current_user != @dress.user %>
+            <%= render 'bookings/form', booking: @booking %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
