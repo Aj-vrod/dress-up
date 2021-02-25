@@ -29,6 +29,31 @@
 }
 
 
+/* Card in Home */
+
+.cards .card-dress-home .card-dress-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.card-dress-home h2 {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card-dress-home:hover .card-dress-image {
+  box-shadow: 8px 8px 0px 0px #6951FF;
+  &h2 {
+    color: #323232;
+  }
+}
+
+.card-dress-home:hover h2, p {
+  color: #323232;
+}
+
 /* Bookings Card in Index */
 
 .bookings-card {
