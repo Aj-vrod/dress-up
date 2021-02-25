@@ -8,4 +8,12 @@ class Dress < ApplicationRecord
   validates :title, :description, :category, :color, presence: true
   validates :price, presence: true, numericality: true
   validates :category, inclusion: { in: CATEGORIES }
+
+  # PgSearch functionality
+  include PgSearch::Model
+  pg_search_scope :search_dresses,
+    against: [ :title, :description, :category, :price, :user.address ],
+    using: {
+      tsearch: { prefix: true } # now words that are not finished typing will return something!
+    }
 end

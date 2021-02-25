@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+# Search functionality
+gem 'pg_search', '~> 2.3.0'
+
 # Populate seeds
 gem 'faker'
 

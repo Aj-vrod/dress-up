@@ -6,7 +6,7 @@ puts '🗑 Shredding old dresses...'
 # types of dresses
 sample_categories = ['Bridal Dresses', 'Bridesmaids Dresses', 'Casual Dresses', 'Going Out Dresses', 'Occasion Dresses', 'Summer Dresses', 'Work Dresses']
 # create dresses
-20.times do
+90.times do
   dress = Dress.create!(
     title: Faker::Commerce.product_name,
     description: Faker::ChuckNorris.fact,

@@ -1,7 +1,11 @@
 class DressesController < ApplicationController
   before_action :set_params, only: [:show, :destroy]
   def index
-    @dresses = policy_scope(Dress.all)
+    if params[:query].present?
+      @dresses = policy_scope(Dress.search_dresses(params[:query]))
+    else
+      @dresses = policy_scope(Dress.all)
+    end
   end
 
   def new
