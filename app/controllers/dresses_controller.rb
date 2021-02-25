@@ -6,6 +6,14 @@ class DressesController < ApplicationController
     else
       @dresses = policy_scope(Dress.all)
     end
+    @markers = @dresses.geocoded.map do |dress|
+      {
+        lat: dress.latitude,
+        lng: dress.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { dress: dress }),
+        image_url: helpers.asset_url('marker_dress.png')
+      }
+    end
   end
 
   def new
@@ -33,6 +41,13 @@ class DressesController < ApplicationController
     authorize @dress
     @dress.destroy
     redirect_to dresses_path
+  end
+
+  # HERE MY DRESSES
+
+  def mydresses
+    @dresses = Dress.where(user: current_user)
+    authorize @dresses
   end
 
   private

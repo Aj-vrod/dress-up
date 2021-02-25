@@ -17,6 +17,10 @@ class DressPolicy < ApplicationPolicy
     true
   end
 
+  def mydresses?
+    true
+  end
+
   def destroy?
     record.user == user
   end

@@ -1,28 +1,4 @@
 <div class="container">
-
-  <!-- Map -->
-  <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-
-  <!-- Search bar -->
-  <div class="top">
-    <%= form_tag dresses_path, class: "search", method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          id: "address-input",
-          class: "form-control",
-          placeholder: "Look for anything!"
-        %>
-        <%= submit_tag "Find now", class: "btn btn-primary-small" %>
-      <% end %>
-
-    <%= link_to "add a dress", new_dress_path, class: "btn btn-primary add" %>
-  </div>
-
-  <!-- Featured categories -->
   <div class="main-content">
     <div class="cards">
       <% @dresses.each do |dress| %>

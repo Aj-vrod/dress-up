@@ -1,15 +1,26 @@
 // index top & button
 
-.top .btn {
+.top .add {
   position: fixed;
   bottom: 40px;
   right: 40px;
 }
 
+.search {
+  display: flex;
+  #address-input {
+    max-width: 430px;
+    flex-grow: 1;
+  }
+  .btn {
+    margin-left: 8px;
+  }
+}
+
 // index card order
 
 .cards {
-  margin: 40px 0px;
+  margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 32px;
