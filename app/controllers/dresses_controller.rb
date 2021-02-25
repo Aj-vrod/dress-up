@@ -7,6 +7,7 @@ class DressesController < ApplicationController
         lat: dress.latitude,
         lng: dress.longitude
       }
+    end
   end
 
   def new
