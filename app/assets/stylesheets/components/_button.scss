@@ -8,6 +8,7 @@ $dark-purple: #5b46dd;
 .btn-primary {
   background-color: $purple;
   border: 1px solid $purple;
+  box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.6);
   &:hover {
     background-color: $dark-purple;
     border: 1px solid $dark-purple;
@@ -31,7 +32,6 @@ $dark-purple: #5b46dd;
   background-color: $purple;
   border: 1px solid $purple;
   color:white;
-  box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.6);
   &:hover {
     background-color: $dark-purple;
     border: 1px solid $dark-purple;
@@ -40,7 +40,6 @@ $dark-purple: #5b46dd;
   &:focus {
     background-color: $purple !important;
     border: 1px solid $purple !important;
-    box-shadow: 0px 2px 8px 0px rgba(105, 81, 255, 0.3) !important;
     color:white;
   }
   &:active {
