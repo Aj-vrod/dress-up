@@ -19,91 +19,94 @@
 
 <!-- Browse selected dresses  -->
 <div class="container">
- <div class="main-content">
-  <div class="home-top">
-    <h3>Bridal Dresses</h3>
-    <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
-  </div>
+  <div class="main-content">
+    <div class="home-top">
+      <h3>Bridal Dresses</h3>
+      <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
+    </div>
 
-  <div class="cards">
-      <% @dresses = Dress.where(category: 'Bridal Dresses').limit(3) %>
-      <% @dresses.each do |dress| %>
+    <div class="cards">
+        <% @dresses = Dress.where(category: 'Bridal Dresses').limit(3) %>
+        <% @dresses.each do |dress| %>
 
-    <%= link_to dress_path(dress), class: "dress" do %>
-        <div class="card-dress-home">
-          <% if dress.image.attached? %>
-            <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
-          <% else %>
-             <%= image_tag dress.photo, class: "card-dress-image" %>
-          <% end %>
-          <div class="card-dress-infos">
-            <div>
-              <h2><%= dress.title%></h2>
-              <p><%= dress.price %>€ / day</p>
-            </div>
-           </div>
-        </div>
+      <%= link_to dress_path(dress), class: "dress" do %>
+          <div class="card-dress-home">
+            <% if dress.image.attached? %>
+              <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
+            <% else %>
+               <%= image_tag dress.photo, class: "card-dress-image" %>
+            <% end %>
+            <div class="card-dress-infos">
+              <div>
+                <h2><%= dress.title%></h2>
+                <p><%= dress.price %>€ / day</p>
+              </div>
+             </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
 <div class="container">
- <div class="main-content">
-  <div class="home-top">
-    <h3>Going Out Dresses</h3>
-    <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
-  </div>
+  <div class="main-content">
+    <div class="home-top">
+      <h3>Going Out Dresses</h3>
+      <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
+    </div>
 
-  <div class="cards">
-      <% @dresses = Dress.where(category: 'Going Out Dresses').limit(3) %>
-      <% @dresses.each do |dress| %>
+    <div class="cards">
+        <% @dresses = Dress.where(category: 'Going Out Dresses').limit(3) %>
+        <% @dresses.each do |dress| %>
 
-    <%= link_to dress_path(dress), class: "dress" do %>
-        <div class="card-dress-home">
-          <% if dress.image.attached? %>
-            <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
-          <% else %>
-             <%= image_tag dress.photo, class: "card-dress-image" %>
-          <% end %>
-          <div class="card-dress-infos">
-            <div>
-              <h2><%= dress.title%></h2>
-              <p><%= dress.price %>€ / day</p>
-            </div>
-           </div>
-        </div>
+      <%= link_to dress_path(dress), class: "dress" do %>
+          <div class="card-dress-home">
+            <% if dress.image.attached? %>
+              <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
+            <% else %>
+               <%= image_tag dress.photo, class: "card-dress-image" %>
+            <% end %>
+            <div class="card-dress-infos">
+              <div>
+                <h2><%= dress.title%></h2>
+                <p><%= dress.price %>€ / day</p>
+              </div>
+             </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
 
 <div class="container">
- <div class="main-content">
-  <div class="home-top">
-    <h3>Summer Dresses</h3>
-    <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
-  </div>
+  <div class="main-content">
+    <div class="home-top">
+      <h3>Summer Dresses</h3>
+      <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
+    </div>
 
-  <div class="cards">
-      <% @dresses = Dress.where(category: 'Summer Dresses').limit(3) %>
-      <% @dresses.each do |dress| %>
+    <div class="cards">
+        <% @dresses = Dress.where(category: 'Summer Dresses').limit(3) %>
+        <% @dresses.each do |dress| %>
 
-    <%= link_to dress_path(dress), class: "dress" do %>
-        <div class="card-dress-home">
-          <% if dress.image.attached? %>
-            <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
-          <% else %>
-             <%= image_tag dress.photo, class: "card-dress-image" %>
-          <% end %>
-          <div class="card-dress-infos">
-            <div>
-              <h2><%= dress.title%></h2>
-              <p><%= dress.price %>€ / day</p>
-            </div>
-           </div>
-        </div>
+      <%= link_to dress_path(dress), class: "dress" do %>
+          <div class="card-dress-home">
+            <% if dress.image.attached? %>
+              <%= cl_image_tag dress.image.key, class: "card-dress-image" %>
+            <% else %>
+               <%= image_tag dress.photo, class: "card-dress-image" %>
+            <% end %>
+            <div class="card-dress-infos">
+              <div>
+                <h2><%= dress.title%></h2>
+                <p><%= dress.price %>€ / day</p>
+              </div>
+             </div>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>
