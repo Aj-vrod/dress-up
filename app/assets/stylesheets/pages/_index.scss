@@ -1,13 +1,2 @@
 // Import page-specific CSS files here.
 @import "home";
-
-.search {
-  display: flex;
-  #address-input {
-    max-width: 430px;
-    flex-grow: 1;
-  }
-  .btn {
-    margin-left: 8px;
-  }
-}
