@@ -59,13 +59,19 @@
 .bookings-card {
   width: 100%;
   display: inline-flex;
-  align-items: center;
   margin-bottom: 20px;
+  background-color: white;
+  transition: all .3s ease-in-out;
+  box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.12)
+}
+
+.bookings-card:hover {
+  transform: scale(1.01);
 }
 
 .bookings-card img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
 
@@ -74,6 +80,9 @@
 }
 
 .bookings-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 20px;
 }
 
@@ -82,7 +91,7 @@
 }
 
 .bookings-card-info p {
-  padding: none !important;
+  margin: 0;
 }
 
 .bookings-card-info a {

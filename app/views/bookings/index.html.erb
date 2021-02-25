@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-8">
-      <h1>My Bookings</h1>
+      <h1 class="bookings-heading">My Bookings</h1>
 
       <% @bookings.each do |booking| %>
         <div class="bookings-card">
@@ -16,11 +16,11 @@
               <%= link_to "#{booking.dress.title}", dresses_path(booking.dress) %>
             </h2>
             <p>
-              <strong>From:</strong> <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %> |
+              From <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %> |
               <% startdate = booking.start_date %>
               <% enddate = booking.end_date %>
               <% inclusive_days_in_range = (startdate .. enddate).count %>
-              <strong>Rented for:</strong> <%= inclusive_days_in_range %> days |
+              Rented for: <%= inclusive_days_in_range %> days |
               <% price = booking.dress.price %>
               <% totalprice = inclusive_days_in_range * price %>
               <strong>Total price:</strong> <%= totalprice.round(2) %>€
@@ -28,7 +28,7 @@
           </div>
         </div>
       <% end %>
-      <%= link_to 'Show all dresses', dresses_path %>
+      <%= link_to 'Show all dresses', dresses_path, class: "show-all" %>
     </div>
   </div>
 </div>
