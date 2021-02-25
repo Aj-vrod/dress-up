@@ -1,0 +1,27 @@
+.mapboxgl-popup {
+  max-width: 200px;
+  .info {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: #323232
+  }
+  a:hover {
+    color: #323232
+  }
+}
+
+.mapboxgl-popup-content {
+  border-radius: 0px !important;
+  box-shadow: 8px 8px 0px 0px #6951FF !important;
+}

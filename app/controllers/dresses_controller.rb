@@ -9,7 +9,8 @@ class DressesController < ApplicationController
     @markers = @dresses.geocoded.map do |dress|
       {
         lat: dress.latitude,
-        lng: dress.longitude
+        lng: dress.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { dress: dress })
       }
     end
   end

@@ -1,6 +1,14 @@
 <div class="container">
-  <div class="top">
 
+  <!-- Map -->
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <!-- Search bar -->
+  <div class="top">
     <%= form_tag dresses_path, class: "search", method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -14,6 +22,7 @@
     <%= link_to "add a dress", new_dress_path, class: "btn btn-primary add" %>
   </div>
 
+  <!-- Featured categories -->
   <div class="main-content">
     <div class="cards">
       <% @dresses.each do |dress| %>
@@ -36,11 +45,4 @@
     <% end %>
     </div>
   </div>
-
-  <!-- Map down here -->
-
-  <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
