@@ -13,7 +13,7 @@
 
           <div class="bookings-card-info">
             <h2>
-              <%= link_to "#{booking.dress.title}", dresses_path(booking.dress) %>
+              <%= link_to "#{booking.dress.title.capitalize}", dresses_path(booking.dress) %>
             </h2>
             <p>
               From <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %> |
