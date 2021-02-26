@@ -8,6 +8,7 @@
 
 .search {
   display: flex;
+  margin-bottom: 16px;
   #address-input {
     max-width: 430px;
     flex-grow: 1;
@@ -17,14 +18,21 @@
   }
 }
 
+// index cards-map
+
+.cards-map{
+  display: flex;
+  justify-content: space-between;
+}
+
 // index card order
 
 .cards {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 32px;
-  grid-row-gap: 32px;
+  grid-row-gap: 24px;
   margin-bottom: 21px;
 }
 
@@ -49,6 +57,9 @@
 }
 .top h1, .btn {
   margin-bottom: 20px;
+}
+#map {
+  display: none;
 }
 }
 

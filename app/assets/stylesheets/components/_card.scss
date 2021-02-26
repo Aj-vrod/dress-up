@@ -2,12 +2,12 @@
 
 .cards .card-dress-image {
   width: 100%;
-  height: 560px;
+  height: 450px;
   object-fit: cover;
 }
 
 .card-dress:hover .card-dress-image {
-  box-shadow: 8px 8px 0px 0px #6951FF;
+  box-shadow: 6px 6px 0px 0px #6951FF;
   &h2 {
     color: #323232;
   }
@@ -16,6 +16,7 @@
 .card-dress:hover h2, p {
   color: #323232;
 }
+
 
 .card-dress-infos {
   padding: 16px;
@@ -28,6 +29,10 @@
   margin-bottom: 4px;
 }
 
+.card-dress p {
+  margin: 0;
+  padding: 0;
+}
 
 /* Card in Home */
 
@@ -44,7 +49,7 @@
 }
 
 .card-dress-home:hover .card-dress-image {
-  box-shadow: 8px 8px 0px 0px #6951FF;
+  box-shadow: 6px 6px 0px 0px #6951FF;
   &h2 {
     color: #323232;
   }
