@@ -14,7 +14,12 @@
     <%= link_to "add a dress", new_dress_path, class: "btn btn-primary add" %>
   </div>
 
-<!-- TEST -->
+<!-- NUMBER OF RESULTS -->
+<div class="results-number-title">
+  <h3>Found <%= pluralize @dresses.size, "dress" %></h3>
+</div>
+
+<!-- CONDITION -->
 <% if @dresses.length > 0 %>
 
   <div class="cards-map">
@@ -65,6 +70,6 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 <% end %>
-<!-- TEST END -->
+<!-- CONDITION -->
 
 </div>
