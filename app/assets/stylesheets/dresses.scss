@@ -36,11 +36,25 @@
   margin-bottom: 21px;
 }
 
+// home cards order
+
+.cards-home {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 32px;
+  grid-row-gap: 24px;
+  margin-bottom: 21px;
+}
+
 /* Media queries */
 
 
 @media(max-width: 1200px) {
 .cards {
+  grid-template-columns: 1fr 1fr;
+}
+.cards-home {
   grid-template-columns: 1fr 1fr;
 }
 }
@@ -50,6 +64,9 @@
   display: block;
 }
 .cards {
+  grid-template-columns: 1fr 1fr;
+}
+.cards-home {
   grid-template-columns: 1fr 1fr;
 }
 .top {
@@ -68,6 +85,9 @@
   display: block;
 }
 .cards {
+  grid-template-columns: 1fr;
+}
+.cards-home {
   grid-template-columns: 1fr;
 }
 }

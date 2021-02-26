@@ -25,7 +25,7 @@
       <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
     </div>
 
-    <div class="cards">
+    <div class="cards-home">
         <% @dresses = Dress.where(category: 'Bridal Dresses').limit(3) %>
         <% @dresses.each do |dress| %>
 
@@ -56,7 +56,7 @@
       <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
     </div>
 
-    <div class="cards">
+    <div class="cards-home">
         <% @dresses = Dress.where(category: 'Going Out Dresses').limit(3) %>
         <% @dresses.each do |dress| %>
 
@@ -87,7 +87,7 @@
       <%= link_to "Discover more", dresses_path, class: "btn-primary-small"  %>
     </div>
 
-    <div class="cards">
+    <div class="cards-home">
         <% @dresses = Dress.where(category: 'Summer Dresses').limit(3) %>
         <% @dresses.each do |dress| %>
 
