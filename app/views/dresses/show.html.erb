@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <!-- image -->
-    <div class="col-5">
+    <div class="col-xl-4 col-md-6 col-sm-12">
       <div class="show-content">
         <% if @dress.image.attached? %>
           <%= cl_image_tag @dress.image.key, class: "dress-image-show" %>
@@ -13,7 +13,7 @@
     </div>
 
     <!-- info / booking-->
-    <div class="col-4">
+    <div class="col-xl-4 col-md-4">
       <div class="show-content">
         <div>
           <h1><%= @dress.title.capitalize %></h1>
