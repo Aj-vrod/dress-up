@@ -1,13 +1,12 @@
 <div class="window">
+  <% if dress.image.attached? %>
+    <%= cl_image_tag dress.image.key, class: "dress-image-popup" %>
+  <% else %>
+      <%= image_tag dress.photo, class: "dress-image-popup" %>
+  <% end %>
   <div class="info">
     <h2><%= link_to "#{dress.title.capitalize}", dress_path(dress) %></h2>
     <p><strong>Address: </strong><%= dress.address %></p>
     <p><strong>Price: </strong><%= dress.price %> € / day</p>
-
-     <% if dress.image.attached? %>
-          <%= cl_image_tag dress.image.key, class: "dress-image-popup" %>
-        <% else %>
-          <%= image_tag dress.photo, class: "dress-image-popup" %>
-        <% end %>
   </div>
 </div>
