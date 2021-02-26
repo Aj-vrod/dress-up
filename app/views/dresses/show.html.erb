@@ -16,12 +16,12 @@
     <div class="col-4">
       <div class="show-content">
         <div>
-          <h1><%= @dress.title %></h1>
+          <h1><%= @dress.title.capitalize %></h1>
           <p class="price"><%= @dress.price %> € / day</p>
         </div>
         <div>
           <p class="details"><%= @dress.category %> | <%= @dress.color %></p>
-          <p class="description"><%= @dress.description %></p>
+          <p class="description"><%= @dress.description.capitalize %></p>
         </div>
         <!-- destroy -->
         <div>
