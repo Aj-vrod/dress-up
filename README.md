@@ -50,9 +50,11 @@ All the dresses from the current user
 
 **The app is responsive**
 
+<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/07021a62-b18e-4061-aa8c-2e0b32ad108f/Bildschirmfoto_2021-03-21_um_13.38.40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T153403Z&X-Amz-Expires=86400&X-Amz-Signature=500f2f18bd978be1c2d42ccadff6955ab7edc6ba399d06bb0cf30710d7b026ce&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-21_um_13.38.40.png%22">
+
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/be23ba46-9f8f-4962-88de-b2a0768ab0d0/Bildschirmfoto_2021-03-21_um_13.38.17.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T153352Z&X-Amz-Expires=86400&X-Amz-Signature=3224cf18d99681074bea8d3e2aead0d29fe47d7091749c8335cbe615ba191b18&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-21_um_13.38.17.png%22">
 
-<img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/07021a62-b18e-4061-aa8c-2e0b32ad108f/Bildschirmfoto_2021-03-21_um_13.38.40.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210407%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210407T153403Z&X-Amz-Expires=86400&X-Amz-Signature=500f2f18bd978be1c2d42ccadff6955ab7edc6ba399d06bb0cf30710d7b026ce&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Bildschirmfoto_2021-03-21_um_13.38.40.png%22">
+
 
 
 Is you discover any 🐞s or have any suggestions feel free to write us!
